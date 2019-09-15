@@ -8,4 +8,6 @@ This repository contains a PyTorch implementation of the paper [Learning Similar
     year={2019} }
    
 # Download Data
+To download the Zappos dataset as well as the training, validation and test triplets:
+`python get_data.py`
 # Usage
