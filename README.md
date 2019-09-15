@@ -6,8 +6,23 @@ This repository contains a PyTorch implementation of the paper [Learning Similar
     title={Learning Similarity Conditions Without Explicit Supervision},
     booktitle={ICCV},
     year={2019} }
+    
+# Dependencies
+
+1. Python 2.7
+2. Pytorch version 0.1.12
    
 # Download Data
 To download the Zappos dataset as well as the training, validation and test triplets:
 `python get_data.py`
+
 # Usage
+To train the network with the hyperparameter setttings used in the paper,
+
+`python main.py --name {your experiment name} --learned --num_traintriplets 200000`
+
+When training is done, run the following script to evaluate the trained model on the test set:
+
+`python main.py --test --resume runs/{your experiment name}/model_best.pth.tar`
+
+We trained our model on a single GTX 1080 GPU on a CentOS system.
