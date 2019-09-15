@@ -26,3 +26,6 @@ When training is done, run the following script to evaluate the trained model on
 `python main.py --test --resume runs/{your experiment name}/model_best.pth.tar`
 
 We trained our model on a single GTX 1080 GPU on a CentOS system.
+
+# Contact
+Please do not hesitate to contact me at rxtan@bu.edu if you have any questions or problems running the code.
