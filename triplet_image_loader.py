@@ -51,7 +51,7 @@ class TripletImageLoader(torch.utils.data.Dataset):
 
     def __getitem__(self, index):
         path1, path2, path3, c = self.triplets[index]
-        if os.path.exists(os.path.join(self.root, self.base_path, self.filenamelist[int(path1)])) and os.path.exists(os.path.join(self.root, self.base_path, self.filenamelist[int(path1)])) and os.path.exists(os.path.join(self.root, self.base_path, self.filenamelist[int(path1)])):
+        if os.path.exists(os.path.join(self.root, self.base_path, self.filenamelist[int(path1)])) and os.path.exists(os.path.join(self.root, self.base_path, self.filenamelist[int(path2)])) and os.path.exists(os.path.join(self.root, self.base_path, self.filenamelist[int(path3)])):
             img1 = self.loader(os.path.join(self.root, self.base_path, self.filenamelist[int(path1)]))
             img2 = self.loader(os.path.join(self.root, self.base_path, self.filenamelist[int(path2)]))
             img3 = self.loader(os.path.join(self.root, self.base_path, self.filenamelist[int(path3)]))
